@@ -1,0 +1,349 @@
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+table {
+  width: 100%;
+  text-align: center;
+}
+table th.mat-header-cell {
+  text-align: center;
+}
+table td.mat-cell {
+  padding: 10px 0;
+}
+.overlay-container .ngx-toastr {
+  -webkit-box-shadow: 0px 2px 5px 1px #00000021 !important;
+  -moz-box-shadow: 0px 2px 5px 1px #00000021 !important;
+  box-shadow: 0px 2px 5px 1px #00000021 !important;
+  background-size: 10px !important;
+  border-radius: 8px !important;
+  width: auto !important;
+  min-width: 300px !important;
+  margin: 0 10px 6px 0 !important;
+  animation: toastrAnimation 400ms ease-in-out;
+}
+@keyframes toastrAnimation {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.overlay-container .ngx-toastr:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px #cccccc !important;
+  -moz-box-shadow: 0px 0px 15px 0px #cccccc !important;
+  box-shadow: 0px 0px 15px 0px #cccccc !important;
+}
+.overlay-container .toast-message {
+  font-size: 13px;
+}
+.overlay-container .toast-error {
+  background-size: 20px !important;
+}
+.overlay-container .toast-success {
+  background-size: 20px !important;
+}
+.overlay-container .toast-warning {
+  background-size: 20px !important;
+}
+app-modal {
+  /* modals are hidden by default */
+  display: none;
+}
+app-modal .jw-modal {
+  /* modal container fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* z-index must be higher than .jw-modal-background */
+  z-index: 1041;
+  /* enables scrolling for tall modals */
+  overflow: auto;
+  padding: 20px;
+}
+app-modal .jw-modal .modall-body {
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+  border-radius: 10px;
+  /* margin exposes part of the modal background */
+}
+app-modal .jw-modal .custome-modal-header {
+  position: relative;
+}
+app-modal .jw-modal .custome-modal-header .modal-title {
+  color: #282A3A;
+  width: 100%;
+  text-align: center;
+}
+app-modal .jw-modal .custome-modal-header .close-icon {
+  position: absolute;
+  top: -5px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  margin: 0;
+  height: auto;
+}
+app-modal .modal-small {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  app-modal .modal-small .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  app-modal .modal-small .modall-body {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  app-modal .modal-small .modall-body {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  app-modal .modal-small .modall-body {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  app-modal .modal-small .modall-body {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  app-modal .modal-small .modall-body {
+    width: 600px;
+  }
+}
+app-modal .modal-large {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  app-modal .modal-large .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  app-modal .modal-large .modall-body {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  app-modal .modal-large .modall-body {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  app-modal .modal-large .modall-body {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  app-modal .modal-large .modall-body {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  app-modal .modal-large .modall-body {
+    width: 1200px;
+  }
+}
+app-modal .modal-full-screen {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  app-modal .modal-full-screen .modall-body {
+    width: 100%;
+  }
+}
+app-modal .modal-h-start {
+  justify-content: flex-start;
+}
+app-modal .modal-h-end {
+  justify-content: flex-end;
+}
+app-modal .jw-modal-background {
+  /* modal background fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* semi-transparent black  */
+  background-color: #000;
+  opacity: 0.75;
+  /* z-index must be below .jw-modal and above everything else  */
+  z-index: 1040;
+}
+body.jw-modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
+}
+.pagination-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .pagination-col {
+    margin-bottom: 5rem;
+  }
+}
+.pagination-col .pagination-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.pagination-col .pagination-ul .pagination-li {
+  background: #282A3A;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.pagination-col .pagination-ul .pagination-li:first-child {
+  margin: 0 0 0 10px;
+}
+.pagination-col .pagination-ul .pagination-li:last-child {
+  margin: 0 10px 0 0;
+}
+.pagination-col .pagination-ul .active-li {
+  border: 1px solid #E5E4EC;
+  min-width: 80px;
+  width: auto;
+  padding: 0 5px;
+}
+.pagination-col .pagination-ul .active-li .page {
+  margin-right: 3px;
+}
+.pagination-col .pagination-ul .previous-toggle {
+  width: 20px;
+  height: 20px;
+}
+.pagination-col .pagination-ul .next-toggle {
+  transform: rotate(-180deg);
+  width: 20px;
+  height: 20px;
+}
+.page-loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1060;
+  background-color: #fff;
+}
+.page-loading-wrapper .page-loading-logo {
+  width: 140px;
+  animation: pageLoadingAnime 200ms ease-in-out;
+}
+@keyframes pageLoadingAnime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.page-loading-wrapper .page-loading-gif {
+  width: 55px;
+}
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+}
+.sidenav-content {
+  min-height: 100vh;
+}
+.sidenav {
+  background-color: #282A3A;
+}
+.sidenav .sidenav-wrapper {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.top-nav {
+  background-color: #282A3A;
+  padding: 15px;
+}
+.sidenav-text {
+  color: #fff;
+}
+.simple-ul {
+  list-style: none;
+}
+.simple-ul .li {
+  margin-bottom: 10px;
+}
+.simple-ul .li .key {
+  color: #282A3A;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.simple-ul .li .value {
+  color: #000;
+}
+@media screen and (max-width: 1200px) {
+  .table-responsive-col {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}

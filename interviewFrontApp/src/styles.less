@@ -1,1 +1,446 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+///////////// palette start /////////////////
+@main-color: #282A3A;
+///////////// palette end //////////////////
+
+//////// table custome adjustments start //////////
+
+table {
+    width: 100%;
+    text-align: center;
+
+    th.mat-header-cell {
+        text-align: center;
+    }
+
+    td.mat-cell {
+        padding: 10px 0;
+    }
+}
+
+//////// table custome adjustments end //////////
+
+//////////// toastr start /////////////
+.overlay-container {
+    .ngx-toastr {
+        -webkit-box-shadow: 0px 2px 5px 1px #00000021 !important;
+        -moz-box-shadow: 0px 2px 5px 1px #00000021 !important;
+        box-shadow: 0px 2px 5px 1px #00000021 !important;
+        background-size: 10px !important;
+        border-radius: 8px !important;
+        width: auto !important;
+        min-width: 300px !important;
+        margin: 0 10px 6px 0 !important;
+        animation: toastrAnimation 400ms ease-in-out;
+
+        @keyframes toastrAnimation {
+            0% {
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(204, 204, 204, 1) !important;
+            -moz-box-shadow: 0px 0px 15px 0px rgba(204, 204, 204, 1) !important;
+            box-shadow: 0px 0px 15px 0px rgba(204, 204, 204, 1) !important;
+        }
+    }
+
+    .toast-message {
+        font-size: 13px;
+        // padding-top: 5px;
+    }
+
+    .toast-error {
+        // background-color: @light-red !important;
+        // background-image: url(../src/assets/images/core/cross.png);
+        background-size: 20px !important;
+    }
+
+    .toast-success {
+        // background-color: @green !important;
+        // background-image: url(../src/assets/images/core/cross.png);
+        background-size: 20px !important;
+    }
+
+    .toast-warning {
+        // background-image: url(../src/assets/images/core/cross.png);
+        background-size: 20px !important;
+    }
+}
+
+/// toastr end ///
+
+//////////// modal start ///////////////
+@small: 576px;
+@medium: 768px;
+@large: 992px;
+@extra-large: 1200px;
+@extra-extra-large: 1400px;
+
+app-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .jw-modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* z-index must be higher than .jw-modal-background */
+        z-index: 1041;
+
+        /* enables scrolling for tall modals */
+        overflow: auto;
+        padding: 20px;
+
+        .modall-body {
+            padding: 20px;
+            background: #fff;
+            width: 100%;
+            border-radius: 10px;
+            /* margin exposes part of the modal background */
+            // margin: 40px;
+        }
+
+        .custome-modal-header {
+            position: relative;
+
+            .modal-title {
+                color: @main-color;
+                width: 100%;
+                text-align: center;
+            }
+
+            .close-icon {
+                position: absolute;
+                top: -5px;
+                right: 14px;
+                background: transparent;
+                border: none;
+                padding: 0;
+                font-size: 20px;
+                margin: 0;
+                height: auto;
+            }
+        }
+
+    }
+
+    .modal-small {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .modall-body {
+
+            @media screen and (max-width: @small) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @small) and (max-width: @medium) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: @medium) and (max-width: @large) {
+                width: 60%;
+            }
+
+            @media screen and (min-width: @large) and (max-width: @extra-large) {
+                width: 50%;
+            }
+
+            @media screen and (min-width: @extra-large) and (max-width: @extra-extra-large) {
+                width: 50%;
+            }
+
+            @media screen and (min-width: @extra-extra-large) {
+                width: 600px;
+            }
+
+        }
+    }
+
+    .modal-large {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .modall-body {
+
+            @media screen and (max-width: @small) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @small) and (max-width: @medium) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: @medium) and (max-width: @large) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: @large) and (max-width: @extra-large) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: @extra-large) and (max-width: @extra-extra-large) {
+                width: 80%;
+            }
+
+            @media screen and (min-width: @extra-extra-large) {
+                width: 1200px;
+            }
+
+        }
+    }
+
+    .modal-full-screen {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .modall-body {
+
+            @media screen and (max-width: @small) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @small) and (max-width: @medium) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @medium) and (max-width: @large) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @large) and (max-width: @extra-large) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @extra-large) and (max-width: @extra-extra-large) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: @extra-extra-large) {
+                width: 100%;
+                // width: 1200px;
+            }
+
+        }
+    }
+
+    .modal-h-start {
+        justify-content: flex-start;
+    }
+
+    .modal-h-end {
+        justify-content: flex-end;
+    }
+
+    // .modal-v-center {
+    //     align-items: center;
+    // }
+
+    // .modal-v-end {
+    //     align-items: flex-end;
+    // }
+
+    .jw-modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+
+        /* z-index must be below .jw-modal and above everything else  */
+        z-index: 1040;
+    }
+}
+
+body.jw-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+//////////// modal end ///////////////
+
+//// paginations start ////
+.pagination-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width:700px) {
+        margin-bottom: 5rem
+    }
+
+    .pagination-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        .pagination-li {
+            background: @main-color;
+            border-radius: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 13px;
+
+            &:first-child {
+                margin: 0 0 0 10px;
+            }
+
+            &:last-child {
+                margin: 0 10px 0 0;
+            }
+        }
+
+        .active-li {
+            border: 1px solid #E5E4EC;
+            min-width: 80px;
+            width: auto;
+            padding: 0 5px;
+
+            .page {
+                margin-right: 3px;
+            }
+        }
+
+        .previous-toggle {
+            // transform: rotate(180deg);
+            width: 20px;
+            height: 20px;
+        }
+
+        .next-toggle {
+            transform: rotate(-180deg);
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+/// pagination end ////
+
+
+////////////////////// begin page loading ////////////////////
+.page-loading-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1060;
+    background-color: #fff;
+
+    .page-loading-logo {
+        width: 140px;
+        animation: pageLoadingAnime 200ms ease-in-out;
+
+        @keyframes pageLoadingAnime {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .page-loading-gif {
+        width: 55px;
+    }
+}
+
+/////////////////////// end page loading ////////////////////
+
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidenav-content {
+    min-height: 100vh;
+}
+
+.sidenav {
+    background-color: @main-color;
+
+    .sidenav-wrapper {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.top-nav {
+    background-color: @main-color;
+    padding: 15px;
+    // border-radius: 0 0 20px 0;
+}
+
+.sidenav-text {
+    color: #fff;
+}
+
+.simple-ul {
+    list-style: none;
+    // padding: 0;
+
+    .li {
+        margin-bottom: 10px;
+
+        .key {
+            color: @main-color;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        .value {
+            color: #000;
+        }
+    }
+}
+
+.table-responsive-col {
+    @media screen and (max-width:1200px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+}

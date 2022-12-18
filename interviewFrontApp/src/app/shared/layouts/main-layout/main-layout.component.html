@@ -1,0 +1,36 @@
+<mat-drawer-container class="main-container" autosize>
+
+    <mat-drawer #drawer class="sidenav" mode="side" opened="true">
+        <div class="sidenav-wrapper">
+
+            <p class="sidenav-text">{{ user?.name }}</p>
+
+            <p class="sidenav-text">{{ user?.email }}</p>
+
+            <a [routerLink]="['/']" class="mb-2" mat-raised-button color="primary" aria-label="toggle-btn">
+                <mat-icon>home</mat-icon>
+            </a>
+
+            <a [routerLink]="['/user']" class="mb-2" mat-raised-button color="primary" aria-label="toggle-btn">
+                <mat-icon>person</mat-icon>
+            </a>
+
+        </div>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 top-nav">
+                    <button (click)="drawer.toggle()" mat-mini-fab color="primary" aria-label="toggle-btn">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>
