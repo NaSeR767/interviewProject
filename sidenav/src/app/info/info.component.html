@@ -1,0 +1,14 @@
+<mat-drawer-container class="example-container" autosize [hasBackdrop]="true">
+    <mat-drawer #drawer class="example-sidenav" mode="over" opened>
+        <button mat-mini-fab aria-label="close" class="m-2" color="warn" (click)="closeSideNav()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <h4 class="texts">{{ user?.name }}</h4>
+        <h4 class="texts">{{ user?.email }}</h4>
+    </mat-drawer>
+
+    <!-- <div class="example-sidenav-content" (click)="closeSideNav()">
+
+    </div> -->
+
+</mat-drawer-container>
